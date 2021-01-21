@@ -14,6 +14,7 @@ import {
   Image
 } from "spectacle";
 import nightOwlTheme from "prism-react-renderer/themes/nightOwl";
+import "./styles.css";
 
 const theme = {
   colors: {
