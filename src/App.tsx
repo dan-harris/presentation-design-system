@@ -65,8 +65,7 @@ function App() {
     <Deck theme={theme} template={Template}>
       <Slide>
         <FlexBox height="100%" flexDirection="column">
-          <Heading>welcome to spectacle 1 =&gt;</Heading>
-          <Text>my text</Text>
+          <Heading>Journey to the System 🚀</Heading>
         </FlexBox>
       </Slide>
       <Slide>
