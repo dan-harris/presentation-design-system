@@ -26,10 +26,10 @@ const theme = {
   },
   fonts: {
     header:
-      '"Fira Code", MonoLisa, "Helvetica Neue", Helvetica, Arial, sans-serif',
+      'MonoLisa, "Fira Code", "Helvetica Neue", Helvetica, Arial, sans-serif',
     text:
-      '"Fira Code", MonoLisa, "Helvetica Neue", Helvetica, Arial, sans-serif',
-    monospace: '"Fira Code", MonoLisa, "Consolas", "Menlo", monospace'
+      'MonoLisa, "Fira Code", "Helvetica Neue", Helvetica, Arial, sans-serif',
+    monospace: 'MonoLisa, "Fira Code", "Consolas", "Menlo", monospace'
   }
 };
 
