@@ -65,13 +65,27 @@ function App() {
     <Deck theme={theme} template={Template}>
       <Slide>
         <FlexBox height="100%" flexDirection="column">
+          <Box
+            border="solid"
+            borderWidth={4}
+            borderRadius="50%"
+            width="20%"
+            overflow="hidden"
+          >
+            <Image src="./profile-le-good.jpg" width="100%" height="100%" />
+          </Box>
+          <Heading>dan harris</Heading>
+        </FlexBox>
+      </Slide>
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
           <Heading>Journey to the System 🚀</Heading>
         </FlexBox>
       </Slide>
       <Slide>
         <FlexBox height="100%" flexDirection="column">
-          <Heading>welcome to spectacle 2 =&gt;</Heading>
-          <Text>my text</Text>
+          <Heading>Design System.</Heading>
+          <Text>wat?</Text>
         </FlexBox>
       </Slide>
       <Slide>
