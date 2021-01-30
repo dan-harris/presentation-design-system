@@ -252,6 +252,73 @@ function App() {
         </FlexBox>
       </Slide>
 
+      {/* ### APPROACHES */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Heading>L'approche Système 🧐</Heading>
+        </FlexBox>
+      </Slide>
+      <Slide>
+        <Heading>Component props</Heading>
+        <Stepper
+          defaultValue={[]}
+          values={[
+            [2, 4],
+            [7, 14]
+          ]}
+        >
+          {(value, step) => (
+            <>
+              <CodePane
+                highlightStart={value[0]}
+                highlightEnd={value[1]}
+                fontSize={18}
+                language="jsx"
+                autoFillHeight={true}
+                theme={nightOwlTheme}
+              >
+                {`
+  <Text size="large" weight="bold">
+    Much Semantic, so wow.
+  </Text>
+
+
+  <Stack gap={2}>
+    <Text>
+      We have gap on the stack.
+    </Text>
+    <Text>
+      Gappity gap gap.
+    </Text>
+  </Stack>
+              `}
+              </CodePane>
+
+              <Box
+                position="absolute"
+                bottom="8rem"
+                left="3rem"
+                right="3rem"
+                bg="quinary"
+              >
+                {/* {(step === 1 || step === 0) && (
+                  <Text fontSize="1.5rem" margin="0rem">
+                    Semantic Props.
+                  </Text>
+                )} */}
+
+                {step === 2 && (
+                  <Text fontSize="1.5rem" margin="0rem">
+                    You can use the stepper state to render whatever you like as
+                    you step through the code.
+                  </Text>
+                )}
+              </Box>
+            </>
+          )}
+        </Stepper>
+      </Slide>
+
       {/* ### RANDS DELETEME 🚯 */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
