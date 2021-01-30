@@ -147,6 +147,110 @@ function App() {
           <Heading>The Journey so far 💇‍♂️</Heading>
         </FlexBox>
       </Slide>
+      <Slide>
+        <FlexBox height="100%" flexDirection="row" paddingBottom="3rem">
+          <Box>
+            <Appear
+              elementNum={0}
+              transitionEffect={{
+                to: { opacity: 1, transform: "scale(1)" },
+                from: { opacity: 0.2, transform: "scale(0.7)" }
+              }}
+            >
+              <Box
+                width="13rem"
+                height="13rem"
+                border="solid"
+                borderWidth={4}
+                borderRadius="50%"
+                overflow="hidden"
+              >
+                <Box marginLeft="-15%" marginTop="-45%">
+                  <Image src="./delorean-0.png" width="140%" />
+                </Box>
+                <Box position="absolute" left="3rem" top="14rem">
+                  <Text>v??</Text>
+                </Box>
+              </Box>
+            </Appear>
+          </Box>
+          <Text>
+            <Appear elementNum={1}>{"=>"}</Appear>
+          </Text>
+          <Box>
+            <Appear
+              elementNum={1}
+              transitionEffect={{
+                to: { opacity: 1, transform: "scale(1)" },
+                from: { opacity: 0.2, transform: "scale(0.7)" }
+              }}
+            >
+              <Box
+                width="13rem"
+                height="13rem"
+                border="solid"
+                borderWidth={4}
+                borderRadius="50%"
+                overflow="hidden"
+              >
+                <Box marginLeft="-10%">
+                  <Image src="./delorean-1.jpg" width="150%" />
+                </Box>
+                <Box position="absolute" left="3.25rem">
+                  <Text>v1</Text>
+                </Box>
+              </Box>
+            </Appear>
+          </Box>
+          <Text>
+            <Appear elementNum={2}>{"=>"}</Appear>
+          </Text>
+          <Box>
+            <Appear
+              elementNum={2}
+              transitionEffect={{
+                to: { opacity: 1, transform: "scale(1)" },
+                from: { opacity: 0.2, transform: "scale(0.7)" }
+              }}
+            >
+              <Box
+                width="13rem"
+                height="13rem"
+                border="solid"
+                borderWidth={4}
+                borderRadius="50%"
+                overflow="hidden"
+              >
+                <Box marginLeft="-60%">
+                  <Image src="./delorean-2.png" width="110%" />
+                </Box>
+                <Box position="absolute" left="3.25rem">
+                  <Text>v2</Text>
+                </Box>
+              </Box>
+            </Appear>
+          </Box>
+        </FlexBox>
+      </Slide>
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Box>
+            <Box
+              width="17rem"
+              height="17rem"
+              border="solid"
+              borderWidth={4}
+              borderRadius="50%"
+              overflow="hidden"
+            >
+              <Box marginLeft="0%" marginTop="0%">
+                <Image src="./delorean-3.jpg" width="140%" />
+              </Box>
+            </Box>
+          </Box>
+          <Heading>The System (v3)</Heading>
+        </FlexBox>
+      </Slide>
 
       {/* ### RANDS DELETEME 🚯 */}
       <Slide>
