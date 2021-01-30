@@ -11,7 +11,8 @@ import {
   FlexBox,
   FullScreen,
   Stepper,
-  Image
+  Image,
+  Appear
 } from "spectacle";
 import nightOwlTheme from "prism-react-renderer/themes/nightOwl";
 import "./styles.css";
@@ -63,6 +64,7 @@ const Template = () => (
 function App() {
   return (
     <Deck theme={theme} template={Template}>
+      {/* ### INTRO */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Box
@@ -74,7 +76,7 @@ function App() {
           >
             <Image src="./profile-le-good.jpg" width="100%" height="100%" />
           </Box>
-          <Heading>dan harris</Heading>
+          <Heading>Dan Harris</Heading>
         </FlexBox>
       </Slide>
       <Slide>
@@ -82,12 +84,71 @@ function App() {
           <Heading>Journey to the System 🚀</Heading>
         </FlexBox>
       </Slide>
+
+      {/* ### DESIGN SYSTEM, WAT? */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
-          <Heading>Design System.</Heading>
-          <Text>wat?</Text>
+          <Heading>Design System 🤔</Heading>
         </FlexBox>
       </Slide>
+      <Slide>
+        <FlexBox height="100%" flexDirection="row">
+          <Box width="17rem" height="13rem">
+            <Appear elementNum={0}>
+              <Box
+                width="17rem"
+                height="13rem"
+                border="solid"
+                borderWidth={4}
+                borderRadius={4}
+                overflow="hidden"
+              >
+                <Image src="./lego-blocks.png" width="100%" />
+              </Box>
+            </Appear>
+          </Box>
+          <Text>
+            <Appear elementNum={1}>{"=>"}</Appear>
+          </Text>
+          <Box width="17rem" height="13rem">
+            <Appear elementNum={1}>
+              <Box
+                width="17rem"
+                height="13rem"
+                border="solid"
+                borderWidth={4}
+                borderRadius={4}
+                overflow="hidden"
+              >
+                <Image src="./lego-city.png" width="100%" />
+              </Box>
+            </Appear>
+          </Box>
+        </FlexBox>
+      </Slide>
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Box
+            border="solid"
+            borderWidth={4}
+            borderRadius={4}
+            width="45%"
+            height="66%"
+            overflow="hidden"
+          >
+            <Image src="./lego-city-instructions.png" width="100%" />
+          </Box>
+        </FlexBox>
+      </Slide>
+
+      {/* ### HISTORY/JOURNEY STORY */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Heading>The Journey so far 💇‍♂️</Heading>
+        </FlexBox>
+      </Slide>
+
+      {/* ### RANDS DELETEME 🚯 */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Box border="solid" borderWidth={4} borderRadius={4} width="70%">

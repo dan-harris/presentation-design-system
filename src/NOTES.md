@@ -8,21 +8,31 @@ _Design System Journey_
 
 - Come with us now on a Journey through time and space.
 - brief overview of what we're talking about
+- some of the story of how our current system came about
+- approaches found useful
+- some quick reflections
 
 ### DESIGN SYSTEM, WAT?
+
+- just to clear it up - Design System? What? (Apart from it needing a differnt name)
 
 **What do we mean by Design System**
 
 - good question!
+- imagine building blocks
+- can use these basic blocks to build a city
 
 **Why a Design System?**
 
 - Consistent UX
 - Abstract complexities of cross-browser (ie / safari), accessibility
 - Same language spoken across engineering, design, product
-- lower barrier to entry for team members.
+- lower barrier∫ to entry for team members.
+- keeping lego example, can say "I want 3 windows" - don't need to then build windows and figure out how they might work
 
 ### HISTORY/JOURNEY STORY
+
+- back to our Design system... how did we get to where we are?
 
 **Early History**
 
