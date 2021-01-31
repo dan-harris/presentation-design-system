@@ -264,11 +264,13 @@ function App() {
           defaultValue={[]}
           values={[
             [2, 4],
-            [7, 14]
+            [6, 8],
+            [10, 12],
+            [14, 16]
           ]}
         >
           {(value, step) => (
-            <>
+            <Box paddingLeft="3rem" paddingRight="3rem">
               <CodePane
                 highlightStart={value[0]}
                 highlightEnd={value[1]}
@@ -279,44 +281,99 @@ function App() {
               >
                 {`
   <Text size="large" weight="bold">
-    Much Semantic, so wow.
+    ...
   </Text>
 
-
-  <Stack gap={2}>
-    <Text>
-      We have gap on the stack.
-    </Text>
-    <Text>
-      Gappity gap gap.
-    </Text>
+  <Stack gap={2} align="center">
+    ...
   </Stack>
+
+  <Inline align={["center", "left", "left"]}>
+    ...
+  </Inline>
+
+  <Hidden visible={["visible", "hidden", "visible"]}>
+    ...
+  </Hidden>
               `}
               </CodePane>
 
               <Box
                 position="absolute"
                 bottom="8rem"
-                left="3rem"
-                right="3rem"
+                left="6rem"
+                right="6rem"
                 bg="quinary"
               >
-                {/* {(step === 1 || step === 0) && (
+                {(step === 1 || step === 0) && (
                   <Text fontSize="1.5rem" margin="0rem">
-                    Semantic Props.
+                    Semantic props - where possible, expose as System
+                    tokens/variables.
                   </Text>
-                )} */}
+                )}
 
-                {step === 2 && (
+                {(step === 2 || step === 3) && (
                   <Text fontSize="1.5rem" margin="0rem">
-                    You can use the stepper state to render whatever you like as
-                    you step through the code.
+                    Responsive props - follow System `mobile`, `tablet`,
+                    `desktop` breakpoints.
                   </Text>
                 )}
               </Box>
-            </>
+            </Box>
           )}
         </Stepper>
+      </Slide>
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Box>
+            <Box
+              width="29rem"
+              height="17rem"
+              border="solid"
+              borderWidth={4}
+              borderRadius={4}
+              overflow="hidden"
+            >
+              <Box marginLeft="0%" marginTop="0%">
+                <Image src="./font-capsize.jpg" width="100%" />
+              </Box>
+            </Box>
+          </Box>
+          <Heading>Typography</Heading>
+        </FlexBox>
+      </Slide>
+
+      {/* ### REFLECTIONS */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Heading>Reflections 🪞</Heading>
+        </FlexBox>
+      </Slide>
+
+      {/* ### OUTRO */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Box
+            border="solid"
+            borderWidth={4}
+            borderRadius="50%"
+            width="20%"
+            overflow="hidden"
+          >
+            <Image src="./profile-le-good.jpg" width="100%" height="100%" />
+          </Box>
+          <Heading>Dan Harris</Heading>
+        </FlexBox>
+      </Slide>
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Box border="solid" borderWidth={4} borderRadius={4} width="70%">
+            <Image
+              src="https://nerdist.com/wp-content/uploads/2020/07/maxresdefault.jpg"
+              width="100%"
+            />
+          </Box>
+        </FlexBox>
       </Slide>
 
       {/* ### RANDS DELETEME 🚯 */}
@@ -346,7 +403,7 @@ function App() {
                 highlightStart={value[0]}
                 highlightEnd={value[1]}
                 fontSize={18}
-                language="jsx"
+                language="tsx"
                 autoFillHeight={true}
                 theme={nightOwlTheme}
               >

@@ -4,6 +4,9 @@ _Design System Journey_
 
 **Intro**
 
+- my name is dan and I struggle with everything.
+- somehow HappyCo let me at their Design System.
+
 **Journey to the System**
 
 - Come with us now on a Journey through time and space.
@@ -65,11 +68,16 @@ _Design System Journey_
 
 - _??_ Need to segue from history to our approaches now....
 
+**Influences?**
+
+- i.e. we stole all these ideas.
+
 **System Component API Approach**
 
+- Most of the component API is really just React component good practice...
 - Semantic Props - Make props align with terminology, especially easier for a Design-centered person to match.
-- Responsive Props.
 - TS gives us typing, but also reduces available 'settings' for someone implementing.
+- Responsive Props.
 
 **Typography Approach**
 
@@ -121,3 +129,7 @@ _NOTES->NOTES_
 
 Journey to the System
 Time for a trip down Design System lane.... Dan shares some of the history and successful approaches used within the Design System at BLERG. For extra spice, hear some of the arguments for removing CSS from _most_ of your app(s) 😀.
+
+**Refs**
+
+- https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
