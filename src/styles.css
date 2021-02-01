@@ -9,3 +9,20 @@ body {
   max-height: 73% !important;
   height: 100%;
 }
+
+.stack * + * {
+  margin-top: 1rem;
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-top: -1rem;
+}
+
+.inline > * {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}

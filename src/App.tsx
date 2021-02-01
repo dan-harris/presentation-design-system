@@ -668,10 +668,182 @@ function App() {
             </Text>
           </Box>
         </FlexBox>
-        <Notes></Notes>
+        <Notes>
+          <p>
+            <strong>Layout approach - lol</strong>
+          </p>
+          <ul>
+            <li>https://mxstbr.com/thoughts/margin/</li>
+            <li>
+              lol, response to component style approach
+              https://news.ycombinator.com/item?id=22678348
+            </li>
+          </ul>
+        </Notes>
       </Slide>
-      {/* Layout Approach - Examples */}
-
+      {/* Layout Approach - Stack */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Heading>Stack</Heading>
+          <FlexBox width="100%">
+            <Box minWidth="20rem">
+              <CodePane
+                fontSize={18}
+                language="jsx"
+                autoFillHeight
+                theme={nightOwlTheme}
+              >
+                {`
+  <Stack gap={1}>
+    <Box />
+    <Box />
+    <Box />
+  </Stack>
+              `}
+              </CodePane>
+            </Box>
+            <FlexBox minWidth="20rem" flexDirection="column">
+              <FlexBox
+                flexDirection="column"
+                border="solid"
+                borderWidth={3}
+                borderRadius={4}
+                borderColor="quinary"
+                padding="0.5rem"
+                className="stack"
+              >
+                <Box
+                  border="solid"
+                  borderWidth={3}
+                  borderRadius={4}
+                  height="1.25rem"
+                  width="10rem"
+                />
+                <Box
+                  border="solid"
+                  borderWidth={3}
+                  borderRadius={4}
+                  height="1.25rem"
+                  width="10rem"
+                />
+                <Box
+                  border="solid"
+                  borderWidth={3}
+                  borderRadius={4}
+                  height="1.25rem"
+                  width="10rem"
+                />
+              </FlexBox>
+            </FlexBox>
+          </FlexBox>
+        </FlexBox>
+        <Notes>
+          <p>
+            <strong>Layout approach - Stack</strong>
+          </p>
+          <ul>
+            <li>
+              Good example of the Layout/Spacer component approach - used to
+              &#39;stack&#39; things on top of each other.
+            </li>
+            <li>
+              Elements themselves (orange boxes) are spaced 1rem apart, however
+              Stack controls that.
+            </li>
+            <li>
+              e.g. Margin should be a property of the enclosing container, not
+              the items in it.
+            </li>
+            <li>
+              uses <em> + </em> lobotomized owl selector to acheive - i.e. just
+              css selector and margin on children.
+            </li>
+          </ul>
+        </Notes>
+      </Slide>
+      {/* Layout Approach - Inline */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Heading>Inline</Heading>
+          <FlexBox width="100%">
+            <Box minWidth="20rem">
+              <CodePane
+                fontSize={18}
+                language="jsx"
+                autoFillHeight
+                theme={nightOwlTheme}
+              >
+                {`
+  <Inline gap={1}>
+    <Box />
+    <Box />
+    <Box />
+  </Inline>
+              `}
+              </CodePane>
+            </Box>
+            <FlexBox minWidth="20rem" flexDirection="column">
+              <Box
+                border="solid"
+                borderWidth={3}
+                borderRadius={4}
+                borderColor="quinary"
+              >
+                <FlexBox
+                  flexDirection="column"
+                  padding="0.5rem"
+                  className="inline"
+                >
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    height="4rem"
+                    width="4rem"
+                  />
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    height="4rem"
+                    width="4rem"
+                  />
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    height="4rem"
+                    width="4rem"
+                  />
+                </FlexBox>
+              </Box>
+            </FlexBox>
+          </FlexBox>
+        </FlexBox>
+        <Notes>
+          <p>
+            <strong>Layout approach - Inline</strong>
+          </p>
+          <ul>
+            <li>
+              Further example of letting the layout component dictate the
+              enclosed items spacing.
+            </li>
+            <li>Uses a margin offset to allow inline content to wrap.</li>
+            <li>
+              We also have columns, which allow for horizontal layout /
+              &#39;tabular&#39; style layouts.
+            </li>
+            <li>
+              Main idea is that we use layout components to lay out our other
+              components.
+            </li>
+            <li>
+              Simple primitives can be combined to create complex layouts.
+            </li>
+          </ul>
+        </Notes>
+      </Slide>
       {/* Forms Approach */}
       <Slide>
         <Heading>Forms</Heading>

@@ -114,9 +114,20 @@ _Design System Journey_
 - https://mxstbr.com/thoughts/margin/
 - lol, response to component style approach https://news.ycombinator.com/item?id=22678348
 
-**Layout approach - examples**
+**Layout approach - Stack**
 
--
+- Good example of the Layout/Spacer component approach - used to 'stack' things on top of each other.
+- Elements themselves (orange boxes) are spaced 1rem apart, however Stack controls that.
+- e.g. Margin should be a property of the enclosing container, not the items in it.
+- uses _ + _ lobotomized owl selector to acheive - i.e. just css selector and margin on children.
+
+**Layout approach - Inline**
+
+- Further example of letting the layout component dictate the enclosed items spacing.
+- Uses a margin offset to allow inline content to wrap.
+- We also have columns, which allow for horizontal layout / 'tabular' style layouts.
+- Main idea is that we use layout components to lay out our other components.
+- Simple primitives can be combined to create complex layouts.
 
 **Forms Approach**
 
