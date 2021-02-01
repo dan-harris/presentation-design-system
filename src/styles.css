@@ -3,3 +3,9 @@ body {
   /* update if slide bg changes */
   background-color: #011627;
 }
+
+/* override missing autoheight */
+.spectacle-auto-height-fill {
+  max-height: 73% !important;
+  height: 100%;
+}

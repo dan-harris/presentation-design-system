@@ -7,12 +7,16 @@ import {
   Link,
   CodePane,
   Progress,
+  Quote,
   Box,
   FlexBox,
   FullScreen,
   Stepper,
   Image,
-  Appear
+  Appear,
+  Notes,
+  UnorderedList,
+  ListItem
 } from "spectacle";
 import nightOwlTheme from "prism-react-renderer/themes/nightOwl";
 import "./styles.css";
@@ -64,7 +68,9 @@ const Template = () => (
 function App() {
   return (
     <Deck theme={theme} template={Template}>
-      {/* ### INTRO */}
+      {/* ### INTRO ### */}
+
+      {/* Intro */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Box
@@ -78,19 +84,65 @@ function App() {
           </Box>
           <Heading>Dan Harris</Heading>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>Intro</strong>
+          </p>
+          <ul>
+            <li>my name is dan and I struggle with everything.</li>
+            <li>
+              actually a Frontend Engineer at HappyCo working on the platform
+              team.
+            </li>
+            <li>somehow HappyCo let me at their React Design System.</li>
+          </ul>
+        </Notes>
       </Slide>
+      {/* Overview */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Heading>Journey to the System 🚀</Heading>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>Journey to the System</strong>
+          </p>
+          <ul>
+            <li>
+              <p>Come with us now on a Journey through time and space.</p>
+            </li>
+            <li>
+              <p>
+                <em>brief overview of what we&#39;re talking about</em>
+              </p>
+            </li>
+            <li>some of the story of how our current system came about</li>
+            <li>approaches found useful</li>
+            <li>some quick reflections</li>
+          </ul>
+        </Notes>
       </Slide>
 
-      {/* ### DESIGN SYSTEM, WAT? */}
+      {/* ### DESIGN SYSTEM, WAT? ### */}
+
+      {/* Design System?? */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Heading>Design System 🤔</Heading>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>Design System</strong>
+          </p>
+          <ul>
+            <li>
+              just to clear it up - Design System? What? (Apart from it needing
+              a differnt name)
+            </li>
+          </ul>
+        </Notes>
       </Slide>
+      {/* What do we mean by Design System? */}
       <Slide>
         <FlexBox height="100%" flexDirection="row">
           <Box width="17rem" height="13rem">
@@ -125,7 +177,18 @@ function App() {
             </Appear>
           </Box>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>What do we mean by Design System</strong>
+          </p>
+          <ul>
+            <li>good question!</li>
+            <li>imagine building blocks</li>
+            <li>can use these basic blocks to build a city</li>
+          </ul>
+        </Notes>
       </Slide>
+      {/* Why a Design System? */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Box
@@ -139,14 +202,46 @@ function App() {
             <Image src="./lego-city-instructions.png" width="100%" />
           </Box>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>Why a Design System?</strong>
+          </p>
+          <ul>
+            <li>Consistent UX</li>
+            <li>
+              Abstract complexities of cross-browser (ie / safari),
+              accessibility
+            </li>
+            <li>Same language spoken across engineering, design, product</li>
+            <li>lower barrier∫ to entry for team members.</li>
+            <li>
+              keeping lego example, can say &quot;I want 3 windows&quot; -
+              don&#39;t need to then build windows and figure out how they might
+              work
+            </li>
+          </ul>
+        </Notes>
       </Slide>
 
-      {/* ### HISTORY/JOURNEY STORY */}
+      {/* ### HISTORY/JOURNEY STORY ### */}
+
+      {/* Journey so far */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Heading>The Journey so far 💇‍♂️</Heading>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>Journey so far</strong>
+          </p>
+          <ul>
+            <li>
+              back to our Design system... how did we get to where we are?
+            </li>
+          </ul>
+        </Notes>
       </Slide>
+      {/* History - early, v1, v2 */}
       <Slide>
         <FlexBox height="100%" flexDirection="row" paddingBottom="3rem">
           <Box>
@@ -231,7 +326,49 @@ function App() {
             </Appear>
           </Box>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>Early History</strong>
+          </p>
+          <ul>
+            <li>(well before)</li>
+            <li>Each App/Area defined its own custom styling, components</li>
+            <li>For short term - is faster</li>
+          </ul>
+          <p>
+            <strong>System v1</strong>
+          </p>
+          <ul>
+            <li>Some consolidation and shared components/lib</li>
+            <li>still scoped at an individual &#39;App&#39; level</li>
+            <li>modified as usecases appeared</li>
+            <li>
+              due to no holistic management, quickly drifted, or became
+              prop-party-time
+            </li>
+            <li>No feedback loop with design/design tools</li>
+          </ul>
+          <p>
+            <strong>System v2</strong>
+          </p>
+          <ul>
+            <li>
+              When undertaking a new product set, attempted to collate some of
+              the earlier consolidation work into a &#39;System&#39; approach
+            </li>
+            <li>
+              Added storybook, began cataloging. Started aligning some Design
+              tooling.
+            </li>
+            <li>
+              Greater holistic approach, however still not designed from
+              &#39;ground up&#39; to deal with a System.
+            </li>
+            <li>Example of a button with prop-a-rama</li>
+          </ul>
+        </Notes>
       </Slide>
+      {/* History - v3 */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Box>
@@ -250,14 +387,109 @@ function App() {
           </Box>
           <Heading>The System (v3)</Heading>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>System v3</strong>
+          </p>
+          <ul>
+            <li>
+              Started brand new feature set with new app - needed to share some
+              core UI across multiple apps and areas.
+            </li>
+            <li>
+              Greater emphasis on multiple teams, agility and speed of frontend.
+            </li>
+            <li>
+              Also had an opportunity to rethink holisitic approach;
+              composition, lower-level system primitives and composing, remove
+              need for custom CSS.
+            </li>
+          </ul>
+        </Notes>
       </Slide>
 
-      {/* ### APPROACHES */}
+      {/* ### APPROACHES ### */}
+
+      {/* Approaches */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Heading>L'approche Système 🧐</Heading>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>Approaches</strong>
+          </p>
+          <ul>
+            <li>
+              So that&#39;s how we got here, now for some actual approaches
+              uncovered along the way.
+            </li>
+          </ul>
+        </Notes>
       </Slide>
+      {/* Influences */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Heading>
+            <del>Stuff we stole</del>
+            <br />
+            Influences
+          </Heading>
+          {/* <Link href="https://styled-system.com/">Styled System</Link>
+          <Link href="https://seek-oss.github.io/braid-design-system/">
+            Braid Design System
+          </Link>
+          <Link href="https://gist.github.com/ryanflorence/e5c794e6093d16a69fa88d2112a292f7">
+            Reach UI
+          </Link>
+          <Link href="https://every-layout.dev/">every layout</Link> */}
+          <UnorderedList>
+            <ListItem>Braid Design System</ListItem>
+            <ListItem>Styled System</ListItem>
+            <ListItem>Reach UI</ListItem>
+            <ListItem>every-layout.dev</ListItem>
+          </UnorderedList>
+        </FlexBox>
+        <Notes>
+          <p>
+            <strong>Influences?</strong>
+          </p>
+          <ul>
+            <li>
+              First up some thankyou&#39;s... i.e. we stole all these ideas.
+            </li>
+            <li>
+              <p>
+                Most of the component API is really just React component good
+                practice...
+              </p>
+            </li>
+            <li>
+              <p>
+                Braid (https://seek-oss.github.io/braid-design-system/) heavily
+                influences the majority of our approaches - including layout
+                components and responsive props.
+              </p>
+            </li>
+            <li>
+              <p>
+                Styled System (https://styled-system.com/) is some of the base
+                with which Braid is designed from, we often look at
+                implementations within Braid and cross reference with any in
+                Styled System to form our own approach.
+              </p>
+            </li>
+            <li>
+              Reach UI (https://reach.tech/) - our ‘complex’ components often
+              use Reach UI components as a base, as they are accessible and
+              designed to be styled/composed as needed. We also use the approach
+              from Reach UI of internal data attribute selectors to override
+              styles of our system components.
+            </li>
+          </ul>
+        </Notes>
+      </Slide>
+      {/* System Component API Approach */}
       <Slide>
         <Heading>Component props</Heading>
         <Stepper
@@ -322,7 +554,24 @@ function App() {
             </Box>
           )}
         </Stepper>
+        <Notes>
+          <p>
+            <strong>System Component API Approach</strong>
+          </p>
+          <ul>
+            <li>
+              Semantic Props - Make props align with terminology, especially
+              easier for a Design-centered person to match.
+            </li>
+            <li>
+              TS gives us typing, but also reduces available &#39;settings&#39;
+              for someone implementing.
+            </li>
+            <li>Responsive Props.</li>
+          </ul>
+        </Notes>
       </Slide>
+      {/* Typography Approach */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Box>
@@ -341,16 +590,239 @@ function App() {
           </Box>
           <Heading>Typography</Heading>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>Typography Approach</strong>
+          </p>
+          <ul>
+            <li>
+              Text elements on all text - has handy props like
+              &#39;truncate&#39;.
+            </li>
+            <li>Heading element.</li>
+            <li>
+              Cap size, remove ascender/descenders and odd line height
+              spacing... ZOMG
+            </li>
+          </ul>
+        </Notes>
+      </Slide>
+      {/* Layout Approach - Layout Components */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Heading>Layout Components 🚧</Heading>
+        </FlexBox>
+        <Notes>
+          <p>
+            <strong>Layout approach - Layout Components</strong>
+          </p>
+          <ul>
+            <li>One major change, create systemised layout components</li>
+            <li>
+              if familiar with flutter or other UI development - quite common to
+              have component-level layout abstractions.
+            </li>
+            <li>
+              we also support ie11 and safari, so need to be careful about how
+              layouts work
+            </li>
+          </ul>
+        </Notes>
+      </Slide>
+      {/* Layout Approach - No Margins! */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Heading>No Margins 🙅‍♀️</Heading>
+        </FlexBox>
+        <Notes>
+          <p>
+            <strong>Layout approach - No Margins!@!!</strong>
+          </p>
+          <ul>
+            <li>
+              For our layouts, we use the rule of no margins - or no surrounding
+              whitespace.
+            </li>
+            <li>
+              Margin should be a property of the enclosing container, not the
+              items in it.
+            </li>
+            <li>Max Stoiber gives a great quick article on this.</li>
+          </ul>
+        </Notes>
+      </Slide>
+      {/* Layout Approach - lol */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Box
+            borderLeft="solid"
+            borderWidth={4}
+            borderColor="secondary"
+            margin="2rem"
+            padding="0 1rem"
+          >
+            <Text fontStyle="italic">
+              Now I've seen everything.
+              <br /> Clearly I'm past my prime. I'm going to give up web
+              development and go live in a cave or something.
+            </Text>
+          </Box>
+        </FlexBox>
+        <Notes></Notes>
+      </Slide>
+      {/* Layout Approach - Examples */}
+
+      {/* Forms Approach */}
+      <Slide>
+        <Heading>Forms</Heading>
+        <Stepper
+          defaultValue={[]}
+          values={[
+            [2, 5],
+            [7, 8],
+            [9, 9],
+            [14, 14],
+            [17, 20],
+            [23, 25],
+            [28, 39]
+          ]}
+        >
+          {(value, step) => (
+            <Box paddingLeft="3rem" paddingRight="3rem" height="30rem">
+              <CodePane
+                highlightStart={value[0]}
+                highlightEnd={value[1]}
+                fontSize={18}
+                language="jsx"
+                autoFillHeight
+                theme={nightOwlTheme}
+              >
+                {`
+  <Formik
+    initialValues={{ name: "", email: "" }}
+    onSubmit={handleSubmit}
+  >
+    <Form>
+      <TextField name="name" />
+      <TextField name="email" type="email" />
+      <Button type="submit">Submit</Button>
+    </Form>
+  </Formik>
+
+
+  <TextField name="name" onFieldChange={makeAnAsyncCallOrSomething} throttleMS={400}/>
+
+
+  // OG input
+  <CheckboxInput />
+  // wrapped with Formik 'field' bindings
+  <CheckboxField />
+
+
+  <SignatureField name="signature" />
+  <FileField name="fileUpload" />
+  <CheckboxField name="jeff" />
+
+
+  const schema = Yup.object().shape({
+    name: Yup.string().required('Required'),
+    email: Yup.string().email('Invalid email').required('Required'),
+  });
+
+  <Formik
+    initialValues={{ name: "", email: "" }}
+    validationSchema={schema}
+  >
+    ...
+  </Formik>
+              `}
+              </CodePane>
+
+              <Box
+                position="absolute"
+                bottom="8rem"
+                left="6rem"
+                right="6rem"
+                bg="quinary"
+              >
+                {step === 0 && (
+                  <Text fontSize="1.5rem" margin="0rem">
+                    Formik Form context - handles setup.
+                  </Text>
+                )}
+                {step === 1 && (
+                  <Text fontSize="1.5rem" margin="0rem">
+                    Fields - use Formik context binding hooks under the hood.
+                  </Text>
+                )}
+                {step === 2 && (
+                  <Text fontSize="1.5rem" margin="0rem">
+                    Submit like a 'normal' form. EZ 🚢-it
+                  </Text>
+                )}
+                {step === 3 && (
+                  <Text fontSize="1.5rem" margin="0rem">
+                    Side-effects, throttles .etc all part of prop API for
+                    fields.
+                  </Text>
+                )}
+                {step === 4 && (
+                  <Text fontSize="1.5rem" margin="0rem">
+                    Fields are just wrapped Inputs - allows use of Inputs
+                    without Form.
+                  </Text>
+                )}
+                {step === 5 && (
+                  <Text fontSize="1.5rem" margin="0rem">
+                    Same prop API and 'Field' wrapper for all different input
+                    types.
+                  </Text>
+                )}
+                {step === 6 && (
+                  <Text fontSize="1.5rem" margin="0rem">
+                    Validation using yup 👌
+                  </Text>
+                )}
+              </Box>
+            </Box>
+          )}
+        </Stepper>
+        <Notes>
+          <p>
+            <strong>Forms Approach</strong>
+          </p>
+          <ul>
+            <li>
+              use Formik for forms approach. Really most of the coolness here is
+              due to Formik.
+            </li>
+            <li>Not used Formik before - Declarative Form Framework.</li>
+            <li>as such provide integrated &#39;Field&#39; components.</li>
+            <li>
+              Formik wrappers on base input components - allows quick creation
+              of forms.
+            </li>
+            <li>
+              Generically handle errors in both visuals and form functionality
+              through Formik.
+            </li>
+          </ul>
+        </Notes>
       </Slide>
 
-      {/* ### REFLECTIONS */}
+      {/* ### REFLECTIONS ### */}
+
+      {/* Positives/Negatives */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Heading>Reflections 🪞</Heading>
         </FlexBox>
+        <Notes></Notes>
       </Slide>
 
-      {/* ### OUTRO */}
+      {/* ### OUTRO ### */}
+
+      {/* Outro */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Box
@@ -364,7 +836,18 @@ function App() {
           </Box>
           <Heading>Dan Harris</Heading>
         </FlexBox>
+        <Notes>
+          <p>
+            <strong>Outro</strong>
+          </p>
+          <ul>
+            <li>Thanks for listening! Hope you enjoyed!</li>
+            <li>Hit me up on the twits!</li>
+            <li>Ill leave with you this..... Questions?</li>
+          </ul>
+        </Notes>
       </Slide>
+      {/* Special Surprise */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
           <Box border="solid" borderWidth={4} borderRadius={4} width="70%">
@@ -374,78 +857,6 @@ function App() {
             />
           </Box>
         </FlexBox>
-      </Slide>
-
-      {/* ### RANDS DELETEME 🚯 */}
-      <Slide>
-        <FlexBox height="100%" flexDirection="column">
-          <Box border="solid" borderWidth={4} borderRadius={4} width="70%">
-            <Image
-              src="https://nerdist.com/wp-content/uploads/2020/07/maxresdefault.jpg"
-              width="100%"
-            />
-          </Box>
-        </FlexBox>
-      </Slide>
-      <Slide>
-        <Heading>code blocks</Heading>
-        <Stepper
-          defaultValue={[]}
-          values={[
-            [1, 1],
-            [3, 6],
-            [8, 11]
-          ]}
-        >
-          {(value, step) => (
-            <>
-              <CodePane
-                highlightStart={value[0]}
-                highlightEnd={value[1]}
-                fontSize={18}
-                language="tsx"
-                autoFillHeight={true}
-                theme={nightOwlTheme}
-              >
-                {`
-  <Slide>
-    <FlexBox height="100%" flexDirection="column">
-      <Heading>Welcome to Spectacle 1 =&gt;</Heading>
-      <Text>my text</Text>
-    </FlexBox>
-  </Slide>
-  <Slide>
-    <Heading>Welcome to Spectacle 2 =&gt;</Heading>
-    <Text>my text</Text>
-  </Slide>
-              `}
-              </CodePane>
-
-              <Box
-                position="absolute"
-                bottom="8rem"
-                left="3rem"
-                right="3rem"
-                bg="quinary"
-              >
-                {/* This notes container won't appear for step 0 */}
-
-                {step === 1 && (
-                  <Text fontSize="1.5rem" margin="0rem">
-                    This is a note!
-                  </Text>
-                )}
-
-                {step === 2 && (
-                  <Text fontSize="1.5rem" margin="0rem">
-                    You can use the stepper state to render whatever you like as
-                    you step through the code.
-                  </Text>
-                )}
-              </Box>
-            </>
-          )}
-        </Stepper>
       </Slide>
     </Deck>
   );
