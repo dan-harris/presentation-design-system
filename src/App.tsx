@@ -1,24 +1,22 @@
+// @ts-nocheck
+import nightOwlTheme from "prism-react-renderer/themes/nightOwl";
 import React from "react";
 import {
-  Deck,
-  Slide,
-  Heading,
-  Text,
-  Link,
-  CodePane,
-  Progress,
-  Quote,
+  Appear,
   Box,
+  CodePane,
+  Deck,
   FlexBox,
   FullScreen,
-  Stepper,
+  Heading,
   Image,
-  Appear,
+  ListItem,
   Notes,
+  Slide,
+  Stepper,
+  Text,
   UnorderedList,
-  ListItem
 } from "spectacle";
-import nightOwlTheme from "prism-react-renderer/themes/nightOwl";
 import "./styles.css";
 
 const theme = {
@@ -27,15 +25,15 @@ const theme = {
     secondary: "#C792EA",
     tertiary: "#011627",
     quaternary: "#ABB2BF",
-    quinary: "#03243E"
+    quinary: "#03243E",
   },
   fonts: {
     header:
       'MonoLisa, "Fira Code", "Helvetica Neue", Helvetica, Arial, sans-serif',
     text:
       'MonoLisa, "Fira Code", "Helvetica Neue", Helvetica, Arial, sans-serif',
-    monospace: 'MonoLisa, "Fira Code", "Consolas", "Menlo", monospace'
-  }
+    monospace: 'MonoLisa, "Fira Code", "Consolas", "Menlo", monospace',
+  },
 };
 
 const Template = () => (
@@ -255,7 +253,7 @@ function App() {
               elementNum={0}
               transitionEffect={{
                 to: { opacity: 1, transform: "scale(1)" },
-                from: { opacity: 0.2, transform: "scale(0.7)" }
+                from: { opacity: 0.2, transform: "scale(0.7)" },
               }}
             >
               <Box
@@ -283,7 +281,7 @@ function App() {
               elementNum={1}
               transitionEffect={{
                 to: { opacity: 1, transform: "scale(1)" },
-                from: { opacity: 0.2, transform: "scale(0.7)" }
+                from: { opacity: 0.2, transform: "scale(0.7)" },
               }}
             >
               <Box
@@ -311,7 +309,7 @@ function App() {
               elementNum={2}
               transitionEffect={{
                 to: { opacity: 1, transform: "scale(1)" },
-                from: { opacity: 0.2, transform: "scale(0.7)" }
+                from: { opacity: 0.2, transform: "scale(0.7)" },
               }}
             >
               <Box
@@ -502,7 +500,7 @@ function App() {
           defaultValue={[]}
           values={[
             [2, 8],
-            [10, 16]
+            [10, 16],
           ]}
         >
           {(value, step) => (
@@ -1011,7 +1009,7 @@ function App() {
             [14, 14],
             [17, 20],
             [23, 25],
-            [28, 39]
+            [28, 39],
           ]}
         >
           {(value, step) => (
