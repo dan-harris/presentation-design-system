@@ -5,7 +5,7 @@ _Design System Journey_
 **Intro**
 
 - my name is dan and I struggle with everything.
-- actually a Frontend Engineer at HappyCo working on the platform team.
+- actually a Frontend Engineer at HappyCo, working on our platform team.
 - somehow HappyCo let me at their Design System.
 
 **Journey to the System**
@@ -16,6 +16,7 @@ _Design System Journey_
 - some of the story of how our current system came about
 - approaches found useful
 - some quick reflections
+- We use react for our frontends - but react is really just an implementation detail.
 
 ### DESIGN SYSTEM, WAT?
 
@@ -95,6 +96,12 @@ _Design System Journey_
 
 - Text elements on all text - has handy props like 'truncate'.
 - Heading element.
+- Sets up (somewhat) for i18n.
+
+**Typography Approach - Capsize**
+
+- so text renders a little funny on the web when it comes to layout/spacing.
+- say we set a Text to 100px high... it actually takes up 164px of height when we look in our layout (depending on font).
 - Cap size, remove ascender/descenders and odd line height spacing... ZOMG
 
 **Layout approach - Layout Components**
@@ -139,12 +146,10 @@ _Design System Journey_
 
 ### REFLECTIONS
 
-**Some gripes**
+**Reflections**
 
-- Design tooling still
-
-**Positives**
-
+- Still working on the feedback loop between design tooling.
+- Have our level of abstraction/primitives pretty well defined... but occasionally some slip through / get better insight later.
 - Can implement many pages without a line of custom CSS (i.e. CSS outside of system components).
 - Next step allowing rapid iteration prototyping within a tool like playroom.
 - Rarely get cross-browser layout issues

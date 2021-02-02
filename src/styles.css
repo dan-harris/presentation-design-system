@@ -6,7 +6,7 @@ body {
 
 /* override missing autoheight */
 .spectacle-auto-height-fill {
-  max-height: 73% !important;
+  max-height: 72% !important;
   height: 100%;
 }
 

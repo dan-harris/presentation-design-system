@@ -91,7 +91,7 @@ function App() {
           <ul>
             <li>my name is dan and I struggle with everything.</li>
             <li>
-              actually a Frontend Engineer at HappyCo working on the platform
+              actually a Frontend Engineer at HappyCo, working on our platform
               team.
             </li>
             <li>somehow HappyCo let me at their React Design System.</li>
@@ -119,6 +119,12 @@ function App() {
             <li>some of the story of how our current system came about</li>
             <li>approaches found useful</li>
             <li>some quick reflections</li>
+            <li>
+              <p>
+                We use react for our frontends - but react is really just an
+                implementation detail.
+              </p>
+            </li>
           </ul>
         </Notes>
       </Slide>
@@ -495,10 +501,8 @@ function App() {
         <Stepper
           defaultValue={[]}
           values={[
-            [2, 4],
-            [6, 8],
-            [10, 12],
-            [14, 16]
+            [2, 8],
+            [10, 16]
           ]}
         >
           {(value, step) => (
@@ -537,14 +541,14 @@ function App() {
                 right="6rem"
                 bg="quinary"
               >
-                {(step === 1 || step === 0) && (
+                {step === 0 && (
                   <Text fontSize="1.5rem" margin="0rem">
                     Semantic props - where possible, expose as System
                     tokens/variables.
                   </Text>
                 )}
 
-                {(step === 2 || step === 3) && (
+                {step === 1 && (
                   <Text fontSize="1.5rem" margin="0rem">
                     Responsive props - follow System `mobile`, `tablet`,
                     `desktop` breakpoints.
@@ -574,21 +578,25 @@ function App() {
       {/* Typography Approach */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
-          <Box>
-            <Box
-              width="29rem"
-              height="17rem"
-              border="solid"
-              borderWidth={4}
-              borderRadius={4}
-              overflow="hidden"
-            >
-              <Box marginLeft="0%" marginTop="0%">
-                <Image src="./font-capsize.jpg" width="100%" />
-              </Box>
-            </Box>
-          </Box>
           <Heading>Typography</Heading>
+          <Box minWidth="40rem" minHeight="18rem">
+            <CodePane
+              fontSize={18}
+              language="jsx"
+              autoFillHeight
+              theme={nightOwlTheme}
+            >
+              {`
+  <Heading>
+    God help us, we're in the hands of engineers.
+  </Heading>
+  
+  <Text>
+    Jaguar shark! does it really exist?
+  </Text>
+              `}
+            </CodePane>
+          </Box>
         </FlexBox>
         <Notes>
           <p>
@@ -600,6 +608,153 @@ function App() {
               &#39;truncate&#39;.
             </li>
             <li>Heading element.</li>
+            <li>Sets up (somewhat) for i18n.</li>
+          </ul>
+        </Notes>
+      </Slide>
+      {/* Typography Approach - capsize */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Box>
+            <Heading>Capsize</Heading>
+            <FlexBox>
+              <Box minWidth="22rem" position="relative">
+                <Appear elementNum={0}>
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    borderColor="quinary"
+                    backgroundColor="quinary"
+                    height="4.85rem"
+                    width="9.5rem"
+                    position="absolute"
+                    top="2.5rem"
+                    left="2.25rem"
+                    zIndex="-1"
+                  />
+                  <Heading color="primary" fontSize="4rem" textAlign="left">
+                    Text
+                  </Heading>
+                </Appear>
+                <Appear elementNum={1}>
+                  <Box
+                    position="absolute"
+                    zIndex="-1"
+                    border="solid"
+                    borderRight="none"
+                    borderLeft="none"
+                    borderColor="quaternary"
+                    height="4.85rem"
+                    width="2.5rem"
+                    top="2.5rem"
+                    left="12.25rem"
+                  />
+                  <Box
+                    position="absolute"
+                    zIndex="-1"
+                    top="2rem"
+                    left="12.25rem"
+                  >
+                    <Text color="quaternary" fontSize="1.5rem">
+                      164px
+                    </Text>
+                  </Box>
+                </Appear>
+              </Box>
+              <Box minWidth="20rem" position="relative">
+                <Appear elementNum={2}>
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    borderColor="quinary"
+                    backgroundColor="quinary"
+                    height="2.75rem"
+                    width="9.5rem"
+                    position="absolute"
+                    top="3.5rem"
+                    right="2.5rem"
+                    zIndex="-1"
+                  />
+                  <Heading color="primary" fontSize="4rem" textAlign="right">
+                    Text
+                  </Heading>
+                </Appear>
+                <Appear elementNum={3}>
+                  <Box
+                    position="absolute"
+                    zIndex="-1"
+                    border="solid"
+                    borderRight="none"
+                    borderLeft="none"
+                    borderColor="quaternary"
+                    height="2.75rem"
+                    width="2.5rem"
+                    top="3.5rem"
+                    right="12.25rem"
+                  />
+                  <Box
+                    position="absolute"
+                    zIndex="-1"
+                    top="2rem"
+                    right="12.25rem"
+                  >
+                    <Text color="quaternary" fontSize="1.5rem">
+                      100px
+                    </Text>
+                  </Box>
+                </Appear>
+              </Box>
+              {/* <FlexBox minWidth="20rem" flexDirection="column">
+                <FlexBox
+                  flexDirection="column"
+                  border="solid"
+                  borderWidth={3}
+                  borderRadius={4}
+                  borderColor="quinary"
+                  padding="0.5rem"
+                  className="stack"
+                >
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    height="1.25rem"
+                    width="10rem"
+                  />
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    height="1.25rem"
+                    width="10rem"
+                  />
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    height="1.25rem"
+                    width="10rem"
+                  />
+                </FlexBox>
+              </FlexBox> */}
+            </FlexBox>
+          </Box>
+        </FlexBox>
+        <Notes>
+          <p>
+            <strong>Typography Approach - Capsize</strong>
+          </p>
+          <ul>
+            <li>
+              so text renders a little funny on the web when it comes to
+              layout/spacing.
+            </li>
+            <li>
+              say we set a Text to 100px high... it actually takes up 164px of
+              height when we look in our layout (depending on font).
+            </li>
             <li>
               Cap size, remove ascender/descenders and odd line height
               spacing... ZOMG
@@ -989,7 +1144,27 @@ function App() {
         <FlexBox height="100%" flexDirection="column">
           <Heading>Reflections 🪞</Heading>
         </FlexBox>
-        <Notes></Notes>
+        <Notes>
+          <p>
+            <strong>Reflections</strong>
+          </p>
+          <ul>
+            <li>Still working on the feedback loop between design tooling.</li>
+            <li>
+              Have our level of abstraction/primitives pretty well defined...
+              but occasionally some slip through / get better insight later.
+            </li>
+            <li>
+              Can implement many pages without a line of custom CSS (i.e. CSS
+              outside of system components).
+            </li>
+            <li>
+              Next step allowing rapid iteration prototyping within a tool like
+              playroom.
+            </li>
+            <li>Rarely get cross-browser layout issues</li>
+          </ul>
+        </Notes>
       </Slide>
 
       {/* ### OUTRO ### */}
