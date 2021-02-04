@@ -188,6 +188,10 @@ function App() {
           <ul>
             <li>good question!</li>
             <li>imagine building blocks</li>
+            <li>
+              well formed, fit in a system - created by people who know how to
+              build blocks
+            </li>
             <li>can use these basic blocks to build a city</li>
           </ul>
         </Notes>
@@ -573,193 +577,6 @@ function App() {
           </ul>
         </Notes>
       </Slide>
-      {/* Typography Approach */}
-      <Slide>
-        <FlexBox height="100%" flexDirection="column">
-          <Heading>Typography</Heading>
-          <Box minWidth="40rem" minHeight="18rem">
-            <CodePane
-              fontSize={18}
-              language="jsx"
-              autoFillHeight
-              theme={nightOwlTheme}
-            >
-              {`
-  <Heading>
-    God help us, we're in the hands of engineers.
-  </Heading>
-  
-  <Text>
-    Jaguar shark! does it really exist?
-  </Text>
-              `}
-            </CodePane>
-          </Box>
-        </FlexBox>
-        <Notes>
-          <p>
-            <strong>Typography Approach</strong>
-          </p>
-          <ul>
-            <li>
-              Text elements on all text - has handy props like
-              &#39;truncate&#39;.
-            </li>
-            <li>Heading element.</li>
-            <li>Sets up (somewhat) for i18n.</li>
-          </ul>
-        </Notes>
-      </Slide>
-      {/* Typography Approach - capsize */}
-      <Slide>
-        <FlexBox height="100%" flexDirection="column">
-          <Box>
-            <Heading>Capsize</Heading>
-            <FlexBox>
-              <Box minWidth="22rem" position="relative">
-                <Appear elementNum={0}>
-                  <Box
-                    border="solid"
-                    borderWidth={3}
-                    borderRadius={4}
-                    borderColor="quinary"
-                    backgroundColor="quinary"
-                    height="4.85rem"
-                    width="9.5rem"
-                    position="absolute"
-                    top="2.5rem"
-                    left="2.25rem"
-                    zIndex="-1"
-                  />
-                  <Heading color="primary" fontSize="4rem" textAlign="left">
-                    Text
-                  </Heading>
-                </Appear>
-                <Appear elementNum={1}>
-                  <Box
-                    position="absolute"
-                    zIndex="-1"
-                    border="solid"
-                    borderRight="none"
-                    borderLeft="none"
-                    borderColor="quaternary"
-                    height="4.85rem"
-                    width="2.5rem"
-                    top="2.5rem"
-                    left="12.25rem"
-                  />
-                  <Box
-                    position="absolute"
-                    zIndex="-1"
-                    top="2rem"
-                    left="12.25rem"
-                  >
-                    <Text color="quaternary" fontSize="1.5rem">
-                      164px
-                    </Text>
-                  </Box>
-                </Appear>
-              </Box>
-              <Box minWidth="20rem" position="relative">
-                <Appear elementNum={2}>
-                  <Box
-                    border="solid"
-                    borderWidth={3}
-                    borderRadius={4}
-                    borderColor="quinary"
-                    backgroundColor="quinary"
-                    height="2.75rem"
-                    width="9.5rem"
-                    position="absolute"
-                    top="3.5rem"
-                    right="2.5rem"
-                    zIndex="-1"
-                  />
-                  <Heading color="primary" fontSize="4rem" textAlign="right">
-                    Text
-                  </Heading>
-                </Appear>
-                <Appear elementNum={3}>
-                  <Box
-                    position="absolute"
-                    zIndex="-1"
-                    border="solid"
-                    borderRight="none"
-                    borderLeft="none"
-                    borderColor="quaternary"
-                    height="2.75rem"
-                    width="2.5rem"
-                    top="3.5rem"
-                    right="12.25rem"
-                  />
-                  <Box
-                    position="absolute"
-                    zIndex="-1"
-                    top="2rem"
-                    right="12.25rem"
-                  >
-                    <Text color="quaternary" fontSize="1.5rem">
-                      100px
-                    </Text>
-                  </Box>
-                </Appear>
-              </Box>
-              {/* <FlexBox minWidth="20rem" flexDirection="column">
-                <FlexBox
-                  flexDirection="column"
-                  border="solid"
-                  borderWidth={3}
-                  borderRadius={4}
-                  borderColor="quinary"
-                  padding="0.5rem"
-                  className="stack"
-                >
-                  <Box
-                    border="solid"
-                    borderWidth={3}
-                    borderRadius={4}
-                    height="1.25rem"
-                    width="10rem"
-                  />
-                  <Box
-                    border="solid"
-                    borderWidth={3}
-                    borderRadius={4}
-                    height="1.25rem"
-                    width="10rem"
-                  />
-                  <Box
-                    border="solid"
-                    borderWidth={3}
-                    borderRadius={4}
-                    height="1.25rem"
-                    width="10rem"
-                  />
-                </FlexBox>
-              </FlexBox> */}
-            </FlexBox>
-          </Box>
-        </FlexBox>
-        <Notes>
-          <p>
-            <strong>Typography Approach - Capsize</strong>
-          </p>
-          <ul>
-            <li>
-              so text renders a little funny on the web when it comes to
-              layout/spacing.
-            </li>
-            <li>
-              say we set a Text to 100px high... it actually takes up 164px of
-              height when we look in our layout (depending on font).
-            </li>
-            <li>
-              Cap size, remove ascender/descenders and odd line height
-              spacing... ZOMG
-            </li>
-          </ul>
-        </Notes>
-      </Slide>
       {/* Layout Approach - Layout Components */}
       <Slide>
         <FlexBox height="100%" flexDirection="column">
@@ -993,6 +810,193 @@ function App() {
             </li>
             <li>
               Simple primitives can be combined to create complex layouts.
+            </li>
+          </ul>
+        </Notes>
+      </Slide>
+      {/* Typography Approach */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Heading>Typography</Heading>
+          <Box minWidth="40rem" minHeight="18rem">
+            <CodePane
+              fontSize={18}
+              language="jsx"
+              autoFillHeight
+              theme={nightOwlTheme}
+            >
+              {`
+  <Heading>
+    God help us, we're in the hands of engineers.
+  </Heading>
+  
+  <Text>
+    Jaguar shark! does it really exist?
+  </Text>
+              `}
+            </CodePane>
+          </Box>
+        </FlexBox>
+        <Notes>
+          <p>
+            <strong>Typography Approach</strong>
+          </p>
+          <ul>
+            <li>
+              Text elements on all text - has handy props like
+              &#39;truncate&#39;.
+            </li>
+            <li>Heading element.</li>
+            <li>Sets up (somewhat) for i18n.</li>
+          </ul>
+        </Notes>
+      </Slide>
+      {/* Typography Approach - capsize */}
+      <Slide>
+        <FlexBox height="100%" flexDirection="column">
+          <Box>
+            <Heading>Capsize</Heading>
+            <FlexBox>
+              <Box minWidth="22rem" position="relative">
+                <Appear elementNum={0}>
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    borderColor="quinary"
+                    backgroundColor="quinary"
+                    height="4.85rem"
+                    width="9.5rem"
+                    position="absolute"
+                    top="2.5rem"
+                    left="2.25rem"
+                    zIndex="-1"
+                  />
+                  <Heading color="primary" fontSize="4rem" textAlign="left">
+                    Text
+                  </Heading>
+                </Appear>
+                <Appear elementNum={1}>
+                  <Box
+                    position="absolute"
+                    zIndex="-1"
+                    border="solid"
+                    borderRight="none"
+                    borderLeft="none"
+                    borderColor="quaternary"
+                    height="4.85rem"
+                    width="2.5rem"
+                    top="2.5rem"
+                    left="12.25rem"
+                  />
+                  <Box
+                    position="absolute"
+                    zIndex="-1"
+                    top="2rem"
+                    left="12.25rem"
+                  >
+                    <Text color="quaternary" fontSize="1.5rem">
+                      164px
+                    </Text>
+                  </Box>
+                </Appear>
+              </Box>
+              <Box minWidth="20rem" position="relative">
+                <Appear elementNum={2}>
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    borderColor="quinary"
+                    backgroundColor="quinary"
+                    height="2.75rem"
+                    width="9.5rem"
+                    position="absolute"
+                    top="3.5rem"
+                    right="2.5rem"
+                    zIndex="-1"
+                  />
+                  <Heading color="primary" fontSize="4rem" textAlign="right">
+                    Text
+                  </Heading>
+                </Appear>
+                <Appear elementNum={3}>
+                  <Box
+                    position="absolute"
+                    zIndex="-1"
+                    border="solid"
+                    borderRight="none"
+                    borderLeft="none"
+                    borderColor="quaternary"
+                    height="2.75rem"
+                    width="2.5rem"
+                    top="3.5rem"
+                    right="12.25rem"
+                  />
+                  <Box
+                    position="absolute"
+                    zIndex="-1"
+                    top="2rem"
+                    right="12.25rem"
+                  >
+                    <Text color="quaternary" fontSize="1.5rem">
+                      100px
+                    </Text>
+                  </Box>
+                </Appear>
+              </Box>
+              {/* <FlexBox minWidth="20rem" flexDirection="column">
+                <FlexBox
+                  flexDirection="column"
+                  border="solid"
+                  borderWidth={3}
+                  borderRadius={4}
+                  borderColor="quinary"
+                  padding="0.5rem"
+                  className="stack"
+                >
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    height="1.25rem"
+                    width="10rem"
+                  />
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    height="1.25rem"
+                    width="10rem"
+                  />
+                  <Box
+                    border="solid"
+                    borderWidth={3}
+                    borderRadius={4}
+                    height="1.25rem"
+                    width="10rem"
+                  />
+                </FlexBox>
+              </FlexBox> */}
+            </FlexBox>
+          </Box>
+        </FlexBox>
+        <Notes>
+          <p>
+            <strong>Typography Approach - Capsize</strong>
+          </p>
+          <ul>
+            <li>
+              so text renders a little funny on the web when it comes to
+              layout/spacing.
+            </li>
+            <li>
+              say we set a Text to 100px high... it actually takes up 164px of
+              height when we look in our layout (depending on font).
+            </li>
+            <li>
+              Cap size, remove ascender/descenders and odd line height
+              spacing... ZOMG
             </li>
           </ul>
         </Notes>
